@@ -1,0 +1,72 @@
+{
+  "name": "commando",
+  "version": "0.10.2",
+  "description": "The official command framework for Discord.js",
+  "license": "Apache-2.0",
+  "author": "AkiraKokiri",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AkiraKokiri/commando.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AkiraKokiri/commando/issues"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "commands"
+  ],
+  "scripts": {
+    "test": "npm run lint && npm run docs:test",
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src",
+    "docs": "docgen --source src --custom docs/index.yml --output docs/docs.json",
+    "docs:test": "docgen --source src --custom docs/index.yml"
+  },
+  "main": "src/index",
+  "types": "./typings/index.d.ts",
+  "dependencies": {
+    "common-tags": "^1.8.0",
+    "escape-string-regexp": "^1.0.5",
+    "require-all": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^10.11.5",
+    "babel-eslint": "^10.0.1",
+    "discord.js": "github:discordjs/discord.js#master",
+    "eslint": "^5.6.1",
+    "eslint-config-aqua": "^4.4.1",
+    "pg": "^7.5.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.39.0",
+    "typescript": "^3.1.1"
+  },
+  "eslintConfig": {
+    "extends": "aqua",
+    "rules": {
+      "es6": "true",
+      "no-process-env": "off",
+      "quote-props": "off",
+      "no-use-before-define": "off",
+      "max-len": "off",
+      "eol-last": "off",
+      "no-console": "off",
+      "no-inline-comments": "off",
+      "capitalized-comments": "off",
+      "no-undef": "off",
+      "max-depth": "warn",
+      "curly": "off",
+      "nonblock-statement-body-position": "off",
+      "indent": [
+        "error",
+        4
+      ],
+      "prefer-destructuring": [
+        "warn"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">=8.6.0"
+  }
+}
